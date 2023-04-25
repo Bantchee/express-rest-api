@@ -1,5 +1,7 @@
 import 'dotenv/config';
+import express from 'express';
 
-console.log('Hello NODE.js Project.');
+const app = express();
 
-console.log(process.env.MY_SECRET);
+app.listen(3000, () => 
+    console.log('Example app listening on http://localhost:3000/'));
