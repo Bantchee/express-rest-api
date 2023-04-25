@@ -1,11 +1,14 @@
 import 'dotenv/config';
+import cors from 'cors';
 import express from 'express';
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
 })
 
-app.listen(3000, () => 
-    console.log('Example app listening on http://localhost:3000/'));
+app.listen(process.env.PORT, () => 
+    console.log(`Example app listening on http://localhost:${process.env.PORT}/`));
